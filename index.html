@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Shop</title>
+    <meta charset="utf-8">
+    <meta name="author" content="YOUR NAME">
+  </head>
+  <body>
+    <div id="content"></div>
+    
+    <script type="text/javascript">
+      var i, x, objInfo;
+
+      var info = {
+        "items": {
+          "c001": {
+            "parent": "c000",
+            "title": "Phones"
+          },
+          "c002": {
+            "parent": "c000",
+            "title": "Laptops"
+          },
+          "c003": {
+            "parent": "c000",
+            "title": "Accessories"
+          },
+          "c004": {
+            "parent": "c100",
+            "title": "Cameras"
+          },
+          "p001": {
+            "parent": "c001",
+            "manufacturer": "Apple",
+            "title": "iPhone 10",
+            "price": 499,
+            "releaseDate": "2018-04-23T18:25:43.511Z"
+          },
+          "p002": {
+            "parent": "c002",
+            "manufacturer": "Apple",
+            "title": "Macbook Pro 2017",
+            "price": 1999,
+            "releaseDate": "2017-04-23T18:25:43.511Z"
+          },
+          "p003": {
+            "parent": "c002",
+            "manufacturer": "Dell",
+            "title": "XPS 13",
+            "price": 1399,
+            "releaseDate": "2017-04-23T18:25:43.511Z"
+          },
+          "p004": {
+            "parent": "c001",
+            "manufacturer": "Samsung",
+            "title": "Samsung Galaxy S10",
+            "price": 399,
+            "releaseDate": "2017-04-23T18:25:43.511Z"
+          },
+          "p005": {
+            "parent": "c003",
+            "manufacturer": "Apple",
+            "title": "Apple Charger 12W",
+            "price": 99,
+            "releaseDate": "2016-12-23T18:25:43.511Z"
+          },
+          "p006": {
+            "parent": "c003",
+            "manufacturer": "Samsung",
+            "title": "Samsung Charger 12W",
+            "price": 89,
+            "releaseDate": "2017-04-23T18:25:43.511Z"  
+          },
+          "p007": {
+            "parent": "c005",
+            "manufacturer": "Samsung",
+            "title": "Samsung VR Headset",
+            "price": 699,
+            "releaseDate": "2018-04-23T18:25:43.511Z"
+          }
+        },
+      };
+      // enter your code here
+      // render the items in the info using native Javascript or jQuery
+
+      objInfo = info.items;
+
+      for (x in objInfo) {
+        if (x.charAt(0) == "c") {
+          var cat = objInfo[x].title;
+          console.log("Category > ", cat);
+        }
+
+        if (x.charAt(0) == "p") {
+          var prod = objInfo[x].title;
+          console.log("Product > ", prod);
+        }
+      }
+
+    </script>
+</body>
+</html>
